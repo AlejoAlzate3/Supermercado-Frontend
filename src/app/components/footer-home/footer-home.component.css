@@ -1,0 +1,91 @@
+.footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: #6A994B;
+    overflow: hidden;
+}
+
+.footer .grupo-1 {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 25px 10px;
+}
+
+.footer .grupo-1 .box figure {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .grupo-1 .box figure img{
+    width: 150px;
+}
+
+.footer .grupo-1 .box h2 {
+    color: #B1F324;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.footer .grupo-1 .box p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    color: aliceblue;
+    margin-right: 10px;
+    text-align: center;
+    transform: all 300ms ease;
+}
+
+.footer .grupo-1 .red-social a:hover {
+    color: #B1F324;
+}
+
+.footer .grupo-1 .red-social a i {
+    line-height: 45px;
+    font-size: 30px;
+}
+
+.footer .grupo-1 .box small {
+    text-align: center;
+    color: #fff;
+}
+
+.logo-footer {
+    height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer .grupo-1 {
+        width: 85%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 35px 0px;
+    }
+
+    .compañia, .servicio, .siguenos, .red-social{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer .grupo-1 {
+        width: 85%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        padding: 35px 0px;
+    }
+}

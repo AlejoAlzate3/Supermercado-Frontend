@@ -1,0 +1,47 @@
+<div class="body">
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="container text-center">
+                        <a routerLink="/home">
+                            <img src="../../../assets/img/LogoMediano.png" alt="login" class="logo">
+                        </a>
+                    </div>
+                    <mat-card>
+                        <div class="container text-center">
+                            <img src="../../../assets/img/usuario1.png" alt="login" class="logo-login">
+                        </div>
+
+                        <h1 class="text-center h1-login">Inicio de Sesión</h1>
+
+                        <form (ngSubmit)="formSubmit()">
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Username</mat-label>
+                                <input [(ngModel)]="loginData.username" name="username" matInput placeholder="Digite su username" required autocomplete="off">
+                                <mat-icon matPrefix aria-hidden="false" aria-label="Account Box" fontIcon="account_box"></mat-icon>
+                            </mat-form-field>
+
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input [(ngModel)]="loginData.password" name="password" matInput type="password" placeholder="Digite su password" required autocomplete="off">
+                                <mat-icon matPrefix aria-hidden="false" aria-label="Lock" fontIcon="lock"></mat-icon>
+                            </mat-form-field>
+
+                            <div class="container container-buttons text-center">
+                                <button mat-raised-button color="primary">
+                                    Iniciar Sesión
+                                </button>
+
+                                <button type="reset" style="margin-left: 15px;" mat-raised-button color="secondary">
+                                    Limpiar
+                                </button>
+                            </div>
+                        </form>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,27 @@
+.mat-mdc-card {
+    margin: 15px 0;
+    background: beige;
+    border: 1px solid #ccc;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table tr td {
+    padding: 15px 10px;
+    border: 0.5px solid #ddd;
+}
+
+.mdc-card__actions {
+    justify-content: center;
+}
+
+.btn-perfil {
+    margin:0 10px;
+}
+
+.titulo_perfil {
+    margin: 15px 0 15px 15px;
+}

@@ -1,0 +1,8 @@
+.body {
+    background: #FEFADD;
+    min-height: 100%;
+}
+
+.col-md-10 {
+    margin: 10px 0;
+}

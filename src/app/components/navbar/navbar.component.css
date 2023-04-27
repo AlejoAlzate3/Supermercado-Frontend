@@ -1,0 +1,120 @@
+.navbar {
+    width: 100%;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    background-color: #6A994B;
+}
+
+div .container {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 110px;
+    position: absolute;
+}
+
+.logo-img-login {
+    width: 110px;
+    position: absolute;
+    margin-left: 130px;
+}
+
+mat-toolbar-row {
+    background-color: #6A994B;
+    padding: 0 35px;
+}
+
+span.mdc-button__label {
+    margin-left: 10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.nombre-app {
+    color: #E9FCDC;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.menu-responsive {
+    display: none;
+}
+
+.nav__input {
+    display: none;
+}
+
+.nav__menu {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo-img {
+        margin-right: 150px;
+    }
+
+    .logo-img-login {
+        margin-left: 27px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .container,
+    .logo-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .navbar {
+        position: relative;
+    }
+
+    div .container {
+        display: none;
+    }
+
+    .nombre-app {
+        display: none;
+    }
+
+    .nombre-app-res {
+        color: #E9FCDC;
+        font-size: 25px;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    mat-toolbar-row .inicio,
+    mat-toolbar-row .productos {
+        display: none;
+    }
+
+    .menu-responsive {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .nombre-app-res {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,14 @@
+.menu {
+    text-align: center;
+    font-weight: bold;
+}
+
+i {
+    margin: 10px;
+}
+
+.sidebar {
+    margin: 15px 5px;
+    background: beige;
+    border: 1px solid #ccc;
+}

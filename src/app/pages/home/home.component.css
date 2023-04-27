@@ -1,0 +1,132 @@
+.body {
+    background: #FEFADD;
+    min-height: 100%;
+}
+
+.titulo {
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
+    margin: 0 -1px;
+}
+
+h1 {
+    font-size: var(--xxl);
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.rw-marca {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.marca {
+    padding: 14px;
+}
+
+.rw2 {
+    margin: 20px 10px;
+}
+
+.c-super {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.super {
+    border-radius: 10px;
+    width: 95%;
+    height: 100%;
+}
+
+.mapa {
+    width: 100px;
+}
+
+.parrafo-ubicacion {
+    font-size: var(--md);
+    padding: 10px;
+}
+
+.rw3 {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.rw4 {
+    margin: 10px 0;
+}
+
+.cont-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.cont-mapa {
+    margin-bottom: 15px;
+}
+
+.manos {
+    width: 100px;
+}
+
+.carrito-compra {
+    width: 100px;
+}
+
+.super2 {
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+}
+
+.cont-info-carrito {
+    padding: 10px;
+    height: fit-content;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    app-slider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+    .mapa {
+        width: 80px;
+    }
+
+    .manos {
+        width: 80px;
+    }
+
+    .carrito-compra {
+        width: 80px;
+    }
+
+    .parrafo-ubicacion {
+        font-size: var(--sm);
+        padding: 5px;
+    }
+
+    .rw2 {
+        margin: 5px 10px;
+    }
+
+    .cont-info-carrito {
+        padding: 5px;
+        margin: 10px 0;
+    }
+}

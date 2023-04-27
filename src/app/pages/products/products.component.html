@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<app-slider></app-slider>
+<div class="body">
+    <div class="container">
+        <div class="titulo row">
+            <div class="col-md-12">
+                <h1> Productos Para El Hogar</h1>
+            </div>
+        </div>
+
+        <div class="row container-row">
+            <div *ngFor="let product of products" class="col-md-4 content-product">
+                <div class="card tarjeta-product">
+                    <div class="row contenido-product">
+                        <div class="col-md-6 img-product">
+                            <img src="../../../assets/img/products/aceitegourmet.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6 info-product">
+                            <div class="card-body">
+                                <div class="content-info">
+                                    <h3 class="card-title text-center">{{product.nombre}}</h3>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text text-center">Precio</p>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text text-center"><strong>$</strong> {{product.precio}}</p>
+                                </div>
+                                <div class="ver-detalle">
+                                    <button routerLink="/products-details" (click)="(product)" class="btn-detalle">Ver Detalle</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-footer-home></app-footer-home>

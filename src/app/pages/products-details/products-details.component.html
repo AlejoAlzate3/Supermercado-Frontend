@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<app-slider></app-slider>
+<div class="body">
+    <div class="container">
+        <div class="titulo row">
+            <div class="col-md-12 title-details">
+                <h1> Detalles del Producto</h1>
+            </div>
+        </div>
+
+        <div class="row container-row">
+            <div class="col-md-12 content-product">
+                <div class="card tarjeta-product">
+                    <div class="row contenido-product">
+                        <div class="col-md-6 img-product">
+                            <img src="../../../assets/img/products/aceitegourmet.png" class="img-fluid rounded-start"
+                                alt="...">
+                        </div>
+                        <div class="col-md-6 info-product">
+                            <div class="card-body">
+                                <div class="content-info">
+                                    <h3 class="card-title">
+                                        <strong>Producto:</strong> //Agregar nombre del producto
+                                    </h3>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text descripcion">
+                                        <strong>Descripción:</strong>
+                                        //TODO: Agregar descripción del producto
+                                    </p>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text"><strong>Precio:</strong>// Agregar precio </p>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text"><strong>Stock:</strong> // Agregar stock </p>
+                                </div>
+                                <div class="content-info">
+                                    <p class="card-text"><strong>Promoción:</strong> // Agregar promocion </p>
+                                </div>
+                                <div class="ver-detalle">
+                                    <button *ngIf="!login.isLoggedIn()" routerLink="/products" class="btn-detalle">Regresar</button>
+                                    <button *ngIf="login.isLoggedIn()" routerLink="/user/products-user" class="btn-detalle">Regresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer-home></app-footer-home>
+

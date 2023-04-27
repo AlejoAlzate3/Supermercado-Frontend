@@ -1,0 +1,40 @@
+<div class="navbar">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <span class="nombre-app">SPL' Costa</span>
+
+            <!-- Menu Responsive -->
+            <button mat-button [mat-menu-trigger-for]="menu" class="menu-responsive">
+                <span class="nombre-app-res">SPL' Costa</span>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button *ngIf="!login.isLoggedIn()" mat-menu-item routerLink="/home">Inicio</button>
+                <button *ngIf="!login.isLoggedIn()" mat-menu-item routerLink="/products">Productos</button>
+            </mat-menu>
+
+            <!-- Menu Normal -->
+            <button *ngIf="!login.isLoggedIn()" class="inicio" mat-button routerLink="/home">Inicio</button>
+            <button *ngIf="!login.isLoggedIn()" class="productos" mat-button routerLink="/products">Productos</button>
+
+            <!-- Logo -->
+            <div class="container">
+                <img *ngIf="!login.isLoggedIn()" src="../../../assets/img/LogoMediano.png" alt="login" class="logo-img">
+                <img *ngIf="login.isLoggedIn()" src="../../../assets/img/LogoMediano.png" alt="login" class="logo-img-login">
+            </div>
+            <span class="example-spacer"></span>
+
+            <!-- Menu Configurado Normal y Login -->
+            <button *ngIf="!login.isLoggedIn()" mat-button [mat-menu-trigger-for]="menu1" class="cuenta">
+                Mi Cuenta <i class="fa-solid fa-circle-user fa-2xl"></i>
+            </button>
+            <button *ngIf="login.isLoggedIn()" mat-button [mat-menu-trigger-for]="menu1" class="user">
+                {{login.getUser().username}} <i class="fa-solid fa-circle-user fa-2xl"></i>
+            </button>
+            <mat-menu #menu1="matMenu">
+                <button *ngIf="!login.isLoggedIn()" mat-menu-item routerLink="/login">Iniciar Sesión</button>
+                <button *ngIf="!login.isLoggedIn()" mat-menu-item routerLink="/signup">Registrarse</button>
+                <button *ngIf="login.isLoggedIn()" mat-menu-item (click)="logout()">Cerrar Sesión</button>
+            </mat-menu>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

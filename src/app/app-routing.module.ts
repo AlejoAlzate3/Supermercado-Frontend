@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProductService } from './services/product.service';
 import { ProductsDetailsComponent } from './pages/products-details/products-details.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
 import { BienvenidoComponent } from './pages/admin/bienvenido/bienvenido.component';
@@ -16,6 +15,8 @@ import { UserGuard } from './services/user.guard';
 import { BienvenidoUserComponent } from './pages/user/bienvenido-user/bienvenido-user.component';
 import { ProductsUserComponent } from './pages/user/products-user/products-user.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { AgregarComponent } from './pages/admin/agregar/agregar.component';
+import { ActualizarComponent } from './pages/admin/actualizar/actualizar.component';
 
 
 const routes: Routes = [
@@ -31,7 +32,7 @@ const routes: Routes = [
   },
   {
     title: 'Detalles del Producto',
-    path: 'products-details',
+    path: 'products-details/:id',
     component : ProductsDetailsComponent,
   },
   {
@@ -63,10 +64,20 @@ const routes: Routes = [
         component: ProductsAdminComponent
       },
       {
+        title: 'Agregar Producto',
+        path: 'agregar',
+        component: AgregarComponent,
+      },
+      {
+        title: 'Editar Producto',
+        path: 'actualizar/:id',
+        component: ActualizarComponent
+      },
+      {
         title: 'Perfil',
         path: 'profile',
         component: ProfileComponent
-      }
+      },
     ]
   },
   {

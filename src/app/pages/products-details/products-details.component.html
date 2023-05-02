@@ -20,23 +20,23 @@
                             <div class="card-body">
                                 <div class="content-info">
                                     <h3 class="card-title">
-                                        <strong>Producto:</strong> //Agregar nombre del producto
+                                        <strong>Producto:</strong> {{products.nombre}}
                                     </h3>
                                 </div>
                                 <div class="content-info">
                                     <p class="card-text descripcion">
                                         <strong>Descripción:</strong>
-                                        //TODO: Agregar descripción del producto
+                                        {{products.descripcion}}
                                     </p>
                                 </div>
                                 <div class="content-info">
-                                    <p class="card-text"><strong>Precio:</strong>// Agregar precio </p>
+                                    <p class="card-text"><strong>Precio:</strong> {{products.precio}} </p>
                                 </div>
                                 <div class="content-info">
-                                    <p class="card-text"><strong>Stock:</strong> // Agregar stock </p>
+                                    <p class="card-text"><strong>Stock:</strong> {{products.stock}} </p>
                                 </div>
                                 <div class="content-info">
-                                    <p class="card-text"><strong>Promoción:</strong> // Agregar promocion </p>
+                                    <p class="card-text"><strong>Promoción:</strong> {{products.promocion}} </p>
                                 </div>
                                 <div class="ver-detalle">
                                     <button *ngIf="!login.isLoggedIn()" routerLink="/products" class="btn-detalle">Regresar</button>

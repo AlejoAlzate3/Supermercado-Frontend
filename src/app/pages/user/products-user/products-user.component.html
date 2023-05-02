@@ -25,7 +25,7 @@
                                     <p class="card-text text-center"><strong>$</strong> {{product.precio}}</p>
                                 </div>
                                 <div class="ver-detalle">
-                                    <button routerLink="/products-details" class="btn-detalle">Ver Detalle</button>
+                                    <button [routerLink]="['/products-details', product.id]" class="btn-detalle">Ver Detalle</button>
                                 </div>
                             </div>
                         </div>

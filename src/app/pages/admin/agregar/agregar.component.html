@@ -5,49 +5,45 @@
 
     <mat-card>
 
-        <form>
+        <form (ngSubmit)="addProduct()">
             <mat-form-field class="full-width" appearance="outline">
-                <mat-label>Producto</mat-label>
-                <input name="producto" matInput type="text" placeholder="Digite el nombre del producto"
+                <mat-label>Nombre del Producto</mat-label>
+                <input [(ngModel)]="product.nombre" name="producto" matInput type="text" placeholder="Digite el nombre del producto"
                     required autocomplete="off">
                 <mat-icon matPrefix aria-hidden="false" aria-label="Inventory 2" fontIcon="inventory 2"></mat-icon>
             </mat-form-field>
 
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Precio</mat-label>
-                <input name="precio" matInput type="number" placeholder="Digite precio del producto"
+                <input [(ngModel)]="product.precio" name="precio" matInput type="number" placeholder="Digite precio del producto"
                     required autocomplete="off">
                 <mat-icon matPrefix aria-hidden="false" aria-label="Price_Change" fontIcon="price_change"></mat-icon>
             </mat-form-field>
 
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Descripción</mat-label>
-                <input name="descripcion" matInput type="text" placeholder="Digite la descripcion del producto"
+                <input [(ngModel)]="product.descripcion" name="descripcion" matInput type="text" placeholder="Digite la descripcion del producto"
                     required autocomplete="off">
                 <mat-icon matPrefix aria-hidden="false" aria-label="Description" fontIcon="description"></mat-icon>
             </mat-form-field>
 
             <mat-form-field class="full-width" appearance="outline">
-                <mat-label>Cantidad</mat-label>
-                <input name="stock" matInput type="number" placeholder="Digite la cantidad del producto"
+                <mat-label>Stock</mat-label>
+                <input [(ngModel)]="product.stock" name="stock" matInput type="number" placeholder="Digite la cantidad del producto"
                     required autocomplete="off">
                 <mat-icon matPrefix aria-hidden="false" aria-label="Add_Shopping_Cart" fontIcon="add_shopping_cart"></mat-icon>
             </mat-form-field>
 
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Descuento</mat-label>
-                <input name="descuento" matInput type="number" placeholder="Digite la promoción del producto"
+                <input [(ngModel)]="product.promocion" name="descuento" matInput type="text" placeholder="Digite la promoción del producto"
                     required autocomplete="off">
                 <mat-icon matPrefix aria-hidden="false" aria-label="Production_Quantity_Limits" fontIcon="production_quantity_limits"></mat-icon>
             </mat-form-field>
 
             <div class="container container-buttons text-center">
                 <button mat-raised-button color="primary">
-                    Agregar
-                </button>
-
-                <button type="reset" style="margin-left: 15px;" mat-raised-button color="secondary">
-                    Limpiar
+                    Agregar Producto
                 </button>
 
                 <button routerLink="/admin/products-admin" style="margin-left: 15px;" mat-raised-button color="secondary">

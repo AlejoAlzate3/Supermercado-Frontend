@@ -39,6 +39,8 @@ import {MatListModule} from '@angular/material/list';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -81,6 +83,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatListModule,
     HttpClientModule,
     NgbModule,
+    MatIconModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

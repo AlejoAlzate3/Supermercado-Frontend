@@ -7,7 +7,7 @@ import baseUrl from './helper';
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
   //Listar todos los productos
   public getAllProducts(){
@@ -16,7 +16,7 @@ export class ProductService {
 
   //Listar un producto por id
   public getProductById(id: number){
-    return this.http.get(`${baseUrl}/api/auth/product/${id}`);
+    return this.http.get(`${baseUrl}/api/auth/products/${id}`);
   }
 
   //Guardar un producto
@@ -30,7 +30,7 @@ export class ProductService {
   }
 
   //Eliminar un producto
-  public deleteProduct(id: number){
+  public deleteProduct(id: any){
     return this.http.delete(`${baseUrl}/api/auth/eliminar/${id}`);
   }
 }

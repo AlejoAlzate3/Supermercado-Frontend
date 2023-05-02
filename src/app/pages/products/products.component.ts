@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import Swal from 'sweetalert2';
 
@@ -12,7 +11,7 @@ export class ProductsComponent implements OnInit {
 
   products : any = [];
 
-  constructor( private productService : ProductService, private router: Router) { }
+  constructor( private productService : ProductService) { }
 
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe(
@@ -26,7 +25,9 @@ export class ProductsComponent implements OnInit {
   }
 
   onClick(product: any){
-    this.products = product;
-    console.log(product);
+    this.productService.getProductById(product.id).subscribe(
+      (data: any) => {
+        this.products = product;
+      });
   }
 }

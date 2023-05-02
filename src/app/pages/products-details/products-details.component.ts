@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
+import { ProductService } from 'src/app/services/product.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-details',
@@ -8,13 +10,22 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class ProductsDetailsComponent implements OnInit {
 
-  constructor(public login: LoginService) { }
+  products : any = [];
+  productID: any = [];
 
-  ngOnInit(): void {}
+  constructor(public login: LoginService, private route: ActivatedRoute, private productoService: ProductService) { }
+
+  ngOnInit(): void {
+    this.productID = this.route.snapshot.paramMap.get('id');
+    this.products = this.productoService.getProductById(this.productID).subscribe(
+      product => {
+        this.products = product;
+        console.log(this.products);
+      });
+  }
 
   public logout(){
     this.login.logout();
     window.location.reload();
   }
-
 }

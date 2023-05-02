@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -25,4 +26,10 @@ export class ProductsUserComponent {
       });
   }
 
+  onClick(product: any){
+    this.productService.getProductById(product.id).subscribe(
+      (data: any) => {
+        this.products = product;
+      });
+  }
 }
